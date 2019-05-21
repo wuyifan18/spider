@@ -171,14 +171,15 @@ class SpiderManager(object):
 
 
 def getIP():
-    while True:
-        try:
-            time.sleep(random.randint(2, 3))
-            response = requests.get('http://webapi.http.zhimacangku.com/getip?num=1&type=1&pro=&city=0&yys=0&port=1&time=1&ts=0&ys=0&cs=0&lb=1&sb=0&pb=45&mr=1&regions=')
-            ip = response.text.strip()
-            return ip
-        except (requests.exceptions.ChunkedEncodingError, requests.exceptions.InvalidURL, requests.exceptions.ProxyError, requests.exceptions.ConnectionError, requests.exceptions.ConnectTimeout, requests.exceptions.ReadTimeout)as e:
-            print('id: {}, getIP: {}'.format(os.getpid(), e))
+    # while True:
+    #     try:
+    #         time.sleep(random.randint(2, 3))
+    #         response = requests.get('http://webapi.http.zhimacangku.com/getip?num=1&type=1&pro=&city=0&yys=0&port=1&time=1&ts=0&ys=0&cs=0&lb=1&sb=0&pb=45&mr=1&regions=')
+    #         ip = response.text.strip()
+    #         return ip
+    #     except (requests.exceptions.ChunkedEncodingError, requests.exceptions.InvalidURL, requests.exceptions.ProxyError, requests.exceptions.ConnectionError, requests.exceptions.ConnectTimeout, requests.exceptions.ReadTimeout)as e:
+    #         print('id: {}, getIP: {}'.format(os.getpid(), e))
+    return ''
 
 
 def f(para):
@@ -230,15 +231,16 @@ def fun(date):
     area = ['北京市', '天津市', '上海市', '重庆市', '河北省', '山西省', '辽宁省', '吉林省', '黑龙江省', '江苏省', '浙江省', '安徽省', '福建省', '江西省',
             '山东省', '河南省', '湖北省', '湖南省', '广东省', '海南省', '四川省', '贵州省', '云南省', '陕西省', '甘肃省', '青海省',
             '内蒙古自治区', '广西壮族自治区', '西藏自治区', '宁夏回族自治区', '新疆维吾尔自治区', '新疆维吾尔自治区高级人民法院生产建设兵团分院']
-    while True:
-        try:
-            response = requests.get('http://webapi.http.zhimacangku.com/getip?num=1&type=1&pro=&city=0&yys=0&port=1&time=1&ts=0&ys=0&cs=0&lb=1&sb=0&pb=45&mr=1&regions=')
-            ip = response.text.strip()
-            if ip.find('"code":111,"success":false') == -1:
-                break
-            time.sleep(random.randint(2, 3))
-        except Exception as e:
-            print('id: {}, getIP: {}'.format(os.getpid(), e))
+    # while True:
+    #     try:
+    #         response = requests.get('http://webapi.http.zhimacangku.com/getip?num=1&type=1&pro=&city=0&yys=0&port=1&time=1&ts=0&ys=0&cs=0&lb=1&sb=0&pb=45&mr=1&regions=')
+    #         ip = response.text.strip()
+    #         if ip.find('"code":111,"success":false') == -1:
+    #             break
+    #         time.sleep(random.randint(2, 3))
+    #     except Exception as e:
+    #         print('id: {}, getIP: {}'.format(os.getpid(), e))
+    ip = ''
     for a in area:
         page_count, count = getCount('1', date, a, ip, '')
         if isinstance(count, list):
@@ -267,6 +269,7 @@ if __name__ == '__main__':
     parser.add_argument('-start_time', default='2016-1-2')
     parser.add_argument('-end_time', default='2016-1-2')
     args = parser.parse_args()
+    enabled_proxy = args.start_time
     pool = multiprocessing.Pool(processes=args.num_processes)
     begin = datetime.datetime.strptime(args.start_time, "%Y-%m-%d")
     end = datetime.datetime.strptime(args.end_time, "%Y-%m-%d")
