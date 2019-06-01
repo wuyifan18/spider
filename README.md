@@ -1,11 +1,12 @@
-# spider
-中国裁判文书网爬虫
+# 中国裁判文书网爬虫
+It is only used for personal study and technical exchange, and cannot be used for commercial purposes.
 ## Overview
 This is a spider for [中国裁判文书网](http://wenshu.court.gov.cn/).
 ## Features
-- 支持代理
-- 根据时间、省份划分数据，支持全量爬取
-- 支持多进程
+- Support IP proxy
+- Support multiple processes
+- support full crawling
+- divide data according to decision time and province
 ## Run
 ```Shell
 python spider.py -num_processes 1 -start_time 2016-1-2 -end_time 2016-1-2
