@@ -5,8 +5,8 @@ This is a spider for [中国裁判文书网](http://wenshu.court.gov.cn/).
 ## Features
 - Support IP proxy
 - Support multiple processes
-- support full crawling
-- divide data according to decision time and province
+- Support full crawling
+- Divide data according to decision time and province
 ## Run
 ```Shell
 python spider.py -num_processes 1 -start_time 2016-1-2 -end_time 2016-1-2
