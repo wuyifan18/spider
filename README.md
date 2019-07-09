@@ -1,5 +1,5 @@
 # A spider for China Judgements Online
-*It is only used for personal study and technical exchange, and cannot be used for commercial purposes.*
+***It is only used for personal study and technical exchange, and cannot be used for commercial purposes.***
 ## Overview
 This is a spider for [中国裁判文书网](http://wenshu.court.gov.cn/).
 ## Features
