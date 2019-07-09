@@ -1,4 +1,3 @@
-# 中国裁判文书网爬虫 
 # A spider for China Judgements Online
 It is only used for personal study and technical exchange, and cannot be used for commercial purposes.
 ## Overview
