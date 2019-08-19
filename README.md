@@ -19,6 +19,8 @@ python spider.py -num_processes 1 -start_time 2016-1-2 -end_time 2016-1-2
 
 ![image](https://github.com/wuyifan18/spider/blob/master/result2.jpg)
 ---
+
+## Contributing
 **If you have any questions, please open an** ***[issue](https://github.com/wuyifan18/spider/issues).***
 
 **Welcome to** ***[pull requests](https://github.com/wuyifan18/spider/pulls)*** **to improve this project!**
