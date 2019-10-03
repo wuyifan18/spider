@@ -1,4 +1,6 @@
 # A spider for China Judgements Online
+## ***This project is no longer maintained and for reference only***
+
 ***It is only used for personal study and technical exchange, and cannot be used for commercial purposes.***
 ## Overview
 This is a spider for [中国裁判文书网](http://wenshu.court.gov.cn/).
@@ -18,9 +20,3 @@ python spider.py -num_processes 1 -start_time 2016-1-2 -end_time 2016-1-2
 - processed data
 
 ![image](https://github.com/wuyifan18/spider/blob/master/result2.jpg)
----
-
-## Contributing
-**If you have any questions, please open an** ***[issue](https://github.com/wuyifan18/spider/issues).***
-
-**Welcome to** ***[pull requests](https://github.com/wuyifan18/spider/pulls)*** **to improve this project!**
